@@ -70,7 +70,7 @@ for t=1:length(scale)
         end
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         
-        lam_est=CF_noisy(Phi,y);
+        lam_est=SupportRecovery(Phi,y);
         
         [mag,ind]=sort(lam_est,'descend');
         
@@ -79,7 +79,7 @@ for t=1:length(scale)
         
         success(t)=success(t)+double(isequal(sort(S),sort(S_hat)));
         
-        fprintf('Number of MMVs=%d, Monte-Carlo iteration number %d\n',n(t),p);
+        fprintf('Number of samples=%d, Monte-Carlo iteration number %d\n',n(t),p);
     end
     success(t)=success(t)/iter;
 end
