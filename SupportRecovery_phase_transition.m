@@ -96,7 +96,7 @@ hold on
 stem(1:d,supp_vec_est,'r*-')
 
 figure(2)
-plot(scale,success,'r*-')                                                   % plot of success rate against nomalized n
+plot(scale,success,'r*-')                                                   % plot of success rate against normalized n
 title( ['d=' num2str(d) '    k=' num2str(k) '   m=' num2str(m)])
 xlabel('$$\frac{n}{k^{2}\log k(d-k)/m^{2}}$$','Interpreter','latex','FontSize',12)
 ylabel('Probability of exact support recovery','FontSize',12);
